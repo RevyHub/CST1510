@@ -1,0 +1,31 @@
+# Ignore everything inside each Week folder
+Week * - */*
+
+# Unignore LAB folders
+!Week * - */LAB/
+!Week * - */LAB/**
+
+# Python build / cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-specific junk
+.DS_Store
+__MACOSX/
+
+# Environment files
+.env
+
+# Editor / IDE files
+.vscode/
+.idea/
