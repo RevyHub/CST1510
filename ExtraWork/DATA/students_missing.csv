@@ -1,0 +1,7 @@
+Name,Course,Grade,Attendance,City,Age,Scholarship
+Alice,Computing,85,96,London,20,Yes
+Ben,Computing,,88,Leeds,22,
+Cara,,91,98,London,21,Yes
+Daniel,Cyber Security,58,,Manchester,24,No
+Eva,Data Science,78,90,Leeds,,Yes
+Farah,Data Science,64,82,Manchester,23,

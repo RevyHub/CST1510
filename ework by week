@@ -1,0 +1,46 @@
+ .gitignore                                      |    8 [32m+[m
+ ExtraWork/DATA/sample_data.csv                  |    4 [32m+[m
+ ExtraWork/DATA/students.csv                     |    7 [32m+[m
+ ExtraWork/DATA/students_missing.csv             |    7 [32m+[m
+ ExtraWork/README.md                             |   51 [32m+[m
+ ExtraWork/extra projects.py                     | 1431 [32m+++++++++++++++++++++++[m
+ ExtraWork/requirements.txt                      |    7 [32m+[m
+ ExtraWork/streamlit_app/Home.py                 |   32 [32m+[m
+ ExtraWork/streamlit_app/pages/1_Dashboard.py    |   30 [32m+[m
+ ExtraWork/streamlit_app/pages/2_Students.py     |   42 [32m+[m
+ ExtraWork/streamlit_app/pages/4_AI_Assistant.py |   60 [32m+[m
+ ExtraWork/weeks/week_01.py                      |  139 [32m+++[m
+ ExtraWork/weeks/week_02.py                      |  192 [32m+++[m
+ ExtraWork/weeks/week_03.py                      |  195 [32m+++[m
+ ExtraWork/weeks/week_04.py                      |  125 [32m++[m
+ ExtraWork/weeks/week_05.py                      |  121 [32m++[m
+ ExtraWork/weeks/week_06.py                      |   74 [32m++[m
+ ExtraWork/weeks/week_07.py                      |  120 [32m++[m
+ ExtraWork/weeks/week_08.py                      |   82 [32m++[m
+ ExtraWork/weeks/week_09.py                      |   62 [32m+[m
+ ExtraWork/weeks/week_10.py                      |   91 [32m++[m
+ ExtraWork/weeks/week_11.py                      |   12 [32m+[m
+ ExtraWork/weeks/week_12.py                      |   86 [32m++[m
+ LAB/W03_Lab.ipynb                               |  927 [32m+++++++++++++++[m
+ LAB/W04_Lab.ipynb                               | 1054 [32m+++++++++++++++++[m
+ LAB/Week_1_lab.py                               |    5 [31m-[m
+ LAB/bank_roulette.py                            |    8 [32m+[m
+ LAB/notes.txt                                   |    1 [32m+[m
+ LAB/password_generator.py                       |   19 [32m+[m
+ LAB/records.txt                                 |    6 [32m+[m
+ LAB/records_sample.txt                          |    4 [32m+[m
+ LAB/results.txt                                 |    3 [32m+[m
+ LAB/template.py                                 |   91 [31m--[m
+ LAB/template_week2.py                           |   91 [31m--[m
+ LAB/week_1_template.py                          |   52 [32m+[m
+ LAB/{week2Lab.py => week_2_lab.py}              |  188 [32m+[m[31m--[m
+ LAB/week_2_template1.py                         |   42 [32m+[m
+ LAB/week_2_template2.py                         |   52 [32m+[m
+ LAB/week_3_template.py                          |   77 [32m++[m
+ LAB/week_4_template.py                          |   68 [32m++[m
+ README.md                                       |   21 [32m+[m[31m-[m
+ blind_auction.py                                |   17 [32m+[m
+ coffee_machine.py                               |   70 [32m++[m
+ week3ep.md                                      |   73 [32m++[m
+ week4ep.md                                      |  191 [32m+++[m
+ 45 files changed, 5756 insertions(+), 282 deletions(-)

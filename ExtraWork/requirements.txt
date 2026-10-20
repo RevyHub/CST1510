@@ -1,0 +1,7 @@
+bcrypt
+openai
+pandas
+pyarrow<21
+python-dotenv
+requests
+streamlit

@@ -26,6 +26,14 @@ __MACOSX/
 # Environment files
 .env
 
+# Generated coursework data and reports
+ExtraWork/DATA/*.db
+ExtraWork/DATA/lab_users.txt
+ExtraWork/DATA/*_clean.csv
+ExtraWork/DATA/city_report.csv
+ExtraWork/DATA/eda_report.csv
+ExtraWork/DATA/sample_incidents.csv
+
 # Editor / IDE files
 .vscode/
 .idea/

@@ -1,0 +1,6 @@
+failed_logins_server_a,42,50
+failed_logins_server_b,75,50
+open_ports_dmz,12,10
+patch_age_days_web01,28,30
+disk_usage_gb_backup,480,500
+cpu_load_db01,95,90
