@@ -49,13 +49,11 @@ df = pd.read_csv(data_path)
 df["Result"] = df["Grade"].apply(lambda g: "Pass" if g >= 60 else "Fail")
 # Assumes Scholarship holds Yes/No (or True/False)
 df["Has_Scholarship"] = df["Scholarship"].astype(str).str.strip().str.lower().isin(["yes", "true", "y", "1"])
-
 print("Most popular course:", df["Course"].value_counts().idxmax())
 print("\nTop 3 students:")
 print(df.nlargest(3, "Grade")[["Name", "Course", "Grade"]].to_string(index=False))
 print("\nAverage attendance (Pass vs Fail):")
 print(df.groupby("Result")["Attendance"].mean().round(1))
-
 corr = df["Attendance"].corr(df["Grade"])
 strength = "strong" if abs(corr) >= 0.7 else "moderate" if abs(corr) >= 0.4 else "weak"
 direction = "positive" if corr > 0 else "negative"

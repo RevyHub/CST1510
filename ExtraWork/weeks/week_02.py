@@ -46,15 +46,15 @@ else:
     print("Obese")
 
 # Task - 5, Negative Numbers
-"""For this one I took the liberty in adding a time lib so you can see it print
-   Because for me it did not print slowly"""
+# For this one I took the liberty in adding a time lib so you can see it print
+# Because for me it did not print slowly
 import time
 for i in range(-10, 0):
     print(i)
     time.sleep(0.2)
 
 # Task - 6, Number Patterns
-"""Likewise for this one ill be using the time import for slower displays"""
+# Likewise for this one ill be using the time import for slower displays
 import time
 for i in range(1, 6):
     for j in range(1, i + 1):

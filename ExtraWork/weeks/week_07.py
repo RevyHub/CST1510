@@ -14,12 +14,10 @@ def word_frequency(text):
     for word, count in top5:
         print(f"  {word}: {count}")
     return frequency
-
 text = """Data science is the study of data. Data scientists use data to find patterns.
 Machine learning is a part of data science. Scientists study data every day!
 The science of data is growing, and data is everywhere."""
 word_frequency(text)
-
 try:
     text_path = Path(__file__).resolve().parents[1] / "DATA" / "Les_Brown.txt"
     with text_path.open(encoding="utf-8") as f:
@@ -37,13 +35,10 @@ def shift_text(text, key):
         else:
             result.append(ch)
     return "".join(result)
-
 def encode(text, key):
     return shift_text(text, key)
-
 def decode(text, key):
     return shift_text(text, -key)
-
 original = "Hello World! 123"
 key = 5
 encoded = encode(original, key)

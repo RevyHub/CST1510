@@ -60,9 +60,9 @@ def get_user_unsafe(conn, username):
     query = f"SELECT * FROM users WHERE username = '{username}'"   # NEVER do this
     print("Query run:", query)
     return conn.execute(query).fetchall()
-print(len(get_user_unsafe(conn, "alice")))           # 1 row
-print(len(get_user_unsafe(conn, "' OR '1'='1")))     # every row: the condition is always true
-print(get_user(conn, "' OR '1'='1"))                 # None: safe version treats it as plain text
+print(len(get_user_unsafe(conn, "alice"))) # 1 row
+print(len(get_user_unsafe(conn, "' OR '1'='1"))) # every row: the condition is always true
+print(get_user(conn, "' OR '1'='1")) # None: safe version treats it as plain text
 # With an f-string the input becomes part of the SQL itself, so an attacker can change the query.
 # Parameterised queries (?) send the input separately as data, so it can never be run as SQL.
 
@@ -86,6 +86,6 @@ print(pd.read_sql("SELECT * FROM cyber_incidents", conn))
 # 1. fetchone() returns the next single row (or None); fetchall() returns every remaining row as a list.
 # 2. Every row in the table would be deleted, because there is no WHERE clause to limit it.
 # 3. If the table already exists, to_sql raises an error by default. if_exists tells pandas whether to
-#    'replace' it, 'append' to it, or 'fail'.
+# 'replace' it, 'append' to it, or 'fail'.
 conn.close()
 

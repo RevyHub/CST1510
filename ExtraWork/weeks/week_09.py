@@ -23,8 +23,6 @@ from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "DATA"
 DATA_DIR.mkdir(exist_ok=True)
-
-
 def register_user(name, password, filepath=DATA_DIR / "lab_users.txt"):
     if not name or "," in name:
         print("Invalid username.")
@@ -54,9 +52,9 @@ print(login_user("mallory", "anything"))    # False
 
 # Task - 4, Reflection Questions
 # 1. bcrypt generates a new random salt on every call and stores it inside the hash,
-#    so the same password produces a different string each time.
+# so the same password produces a different string each time.
 # 2. No. Each user gets a different salt, so identical passwords give different hashes.
-#    An attacker cannot tell who shares a password and precomputed rainbow tables are useless.
+# An attacker cannot tell who shares a password and precomputed rainbow tables are useless.
 # 3. == on two hashes always fails for a correct password because the salt differs each time.
-#    checkpw() reads the salt from the stored hash, re-hashes the attempt and compares properly.
+# checkpw() reads the salt from the stored hash, re-hashes the attempt and compares properly.
 

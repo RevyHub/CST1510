@@ -16,7 +16,6 @@ def isSublist(larger, smaller):
         if larger[i:i + len(smaller)] == smaller:
             return True
     return False
-
 print(isSublist([1, 2, 3, 4], [2, 3]))        # True
 print(isSublist([1, 2, 3, 4], [2, 4]))        # False
 print(isSublist([1, 2, 3, 4], []))            # True
@@ -43,18 +42,15 @@ print("Above 75 in all subjects:", above_75)
 # Task - 8, Pure Python EDA - Custom Statistics Functions
 def get_mean(data):
     return sum(data) / len(data)
-
 def get_median(data):
     ordered = sorted(data)
     mid = len(ordered) // 2
     if len(ordered) % 2 == 1:
         return ordered[mid]
     return (ordered[mid - 1] + ordered[mid]) / 2   # even length: average the middle two
-
 def get_std(data):
     m = get_mean(data)
     return (sum((x - m) ** 2 for x in data) / (len(data) - 1)) ** 0.5
-
 regular_data = [40, 42, 45, 48, 50]
 outlier_data = [40, 42, 45, 48, 1000]
 for label, data in (("Regular", regular_data), ("Outlier", outlier_data)):
@@ -66,22 +62,18 @@ print(get_median([1, 2, 3, 4]))  # 2.5
 # Dictionary of sets: dict gives instant lookup by student, set stops duplicate groups
 # and makes joining/leaving simple.
 groups = {"John": {"Math", "Physics"}, "Emily": {"Physics", "Biology"}, "Alex": {"Math"}}
-
 def join_group(student, group):
     groups.setdefault(student, set()).add(group)
-
 def leave_group(student, group):
     if group in groups.get(student, set()):
         groups[student].remove(group)
     else:
         print(f"{student} is not in {group}.")
-
 def show_groups(student):
     if student not in groups:
         print(f"{student} not found.")
     else:
         print(f"{student}: {', '.join(sorted(groups[student])) or 'no groups'}")
-
 join_group("Alex", "Physics")
 join_group("Sam", "Biology")
 leave_group("John", "Math")
@@ -92,7 +84,6 @@ for name in ("Alex", "John", "Sam", "Zoe"):
 # Task - 32, Pure Python EDA - Custom File Parser
 import csv
 from pathlib import Path
-
 def to_number(text):
     try:
         return int(text)
@@ -101,12 +92,10 @@ def to_number(text):
             return float(text)
         except ValueError:
             return text.strip()
-
 def parse_csv_to_dicts(filepath):
     with open(filepath, newline="") as f:
         return [{key: to_number(value) for key, value in row.items()}
                 for row in csv.DictReader(f)]
-
 try:
     data_path = Path(__file__).resolve().parents[1] / "DATA" / "sample_data.csv"
     data = parse_csv_to_dicts(data_path)

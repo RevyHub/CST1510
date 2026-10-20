@@ -6,13 +6,10 @@ def add(a, b): return a + b
 def subtract(a, b): return a - b
 def multiply(a, b): return a * b
 def exponent(a, b): return a ** b
-
 def divide(a, b):
     return a / b if b != 0 else None
-
 def remainder(a, b):
     return a % b if b != 0 else None
-
 OPERATIONS = {
     "1": ("+", add),
     "2": ("-", subtract),
@@ -21,7 +18,6 @@ OPERATIONS = {
     "5": ("**", exponent),
     "6": ("%", remainder),
 }
-
 def quiz():
     score = 0
     asked = 0
@@ -51,7 +47,6 @@ def quiz():
         else:
             print(f"Wrong - the answer is {correct:.2f}")
     print(f"Final score: {score}/{asked}")
-
 quiz()
 
 # Task - 2, Scientific Calculator (Unit Conversion Chart)
@@ -69,7 +64,6 @@ def atm_pascals(v, fwd=True): return v * 101325 if fwd else v / 101325
 def bar_psi(v, fwd=True): return v * 14.5038 if fwd else v / 14.5038
 def joules_calories(v, fwd=True): return v * 0.239006 if fwd else v / 0.239006
 def kwh_joules(v, fwd=True): return v * 3.6e6 if fwd else v / 3.6e6
-
 CHART = {
     "Length": [("m / ft", "m", "ft", metres_feet), ("in / cm", "in", "cm", inches_cm), ("mi / km", "mi", "km", miles_km)],
     "Temperature": [("C / F", "C", "F", celsius_fahrenheit), ("C / K", "C", "K", celsius_kelvin)],
@@ -78,7 +72,6 @@ CHART = {
     "Pressure": [("atm / Pa", "atm", "Pa", atm_pascals), ("bar / psi", "bar", "psi", bar_psi)],
     "Energy": [("J / cal", "J", "cal", joules_calories), ("kWh / J", "kWh", "J", kwh_joules)],
 }
-
 def choose(prompt, options):
     for i, label in enumerate(options, 1):
         print(f"  {i}) {label}")
@@ -87,7 +80,6 @@ def choose(prompt, options):
         if pick.isdigit() and 1 <= int(pick) <= len(options):
             return int(pick) - 1
         print("Invalid choice.")
-
 while True:
     kind = list(CHART)[choose("Unit type: ", list(CHART))]
     label, a, b, func = CHART[kind][choose("Conversion: ", [c[0] for c in CHART[kind]])]
@@ -106,7 +98,6 @@ while True:
 def is_palindrome(text):
     cleaned = "".join(c.lower() for c in text if c.isalnum())
     return cleaned == cleaned[::-1]
-
 for word in ["civic", "radar", "level", "rotor", "kayak", "madam", "refer",
              "rotator", "deified", "racecar", "reviver", "python"]:
     print(f"{word}: {is_palindrome(word)}")
@@ -127,7 +118,6 @@ def compress_string(text):
     parts.append(f"{text[-1]}{count}")
     compressed = "".join(parts)
     return text if len(compressed) > len(text) else compressed
-
 print(compress_string("aaabbbbcccddeee"))  # a3b4c3d2e3
 print(compress_string("Hello"))            # Hello
 
@@ -144,7 +134,6 @@ ops = {
 new_question = lambda: (randint(0, 9), randint(0, 9))
 is_correct = lambda given, expected: abs(given - expected) < 0.01
 get_number = lambda prompt: float(input(prompt))
-
 score = 0
 asked = 0
 while True:

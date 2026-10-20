@@ -3,7 +3,7 @@
 from dotenv import load_dotenv
 from openai import OpenAI
 
-load_dotenv()          # reads OPENAI_API_KEY from .env (never commit this file)
+load_dotenv() # reads OPENAI_API_KEY from .env (never commit this file)
 client = OpenAI()
 def run_console_chat(system_prompt, client):
     messages = [{"role": "system", "content": system_prompt}]
@@ -18,7 +18,7 @@ def run_console_chat(system_prompt, client):
             response = client.chat.completions.create(model="gpt-4o-mini", messages=messages)
         except Exception as error:
             print(f"API error: {error}")
-            messages.pop()   # keep the history consistent after a failed call
+            messages.pop() # keep the history consistent after a failed call
             continue
         reply = response.choices[0].message.content
         messages.append({"role": "assistant", "content": reply})

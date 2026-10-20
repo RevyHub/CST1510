@@ -22,7 +22,6 @@ def get_with_retry(url, attempts=3):
             return None
     print(f"Giving up after {attempts} attempts.")
     return None
-
 get_with_retry("https://httpbin.org/delay/5")
 
 # Task - 7, Regex Basics
@@ -72,7 +71,6 @@ class PostClient:
         return self._get(f"posts/{post_id}")
     def get_user_posts(self, user_id):
         return self._get("posts", params={"userId": user_id})
-
 client = PostClient("https://jsonplaceholder.typicode.com")
 post = client.get_post(1)
 if post:

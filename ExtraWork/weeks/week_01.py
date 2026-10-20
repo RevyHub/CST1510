@@ -89,7 +89,7 @@ print(f"Columns: {columns}")
 print(f"Cells: {rows * columns}")
 
 # Task - 10, IT - INI-style Config file printer
-"""Theres two ways in doing this but I found it works better when you do this way"""
+# Theres two ways in doing this but I found it works better when you do this way
 pair1 = input("Enter first key=value: ")
 pair2 = input("Enter second key=value: ")
 pair3 = input("Enter third key=value: ")
