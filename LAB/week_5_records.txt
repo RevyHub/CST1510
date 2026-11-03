@@ -1,0 +1,4 @@
+CPU Usage,95,100
+Memory Usage,110,100
+Disk Space,70,100
+Network Traffic,105,100

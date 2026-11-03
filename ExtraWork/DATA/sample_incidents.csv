@@ -1,0 +1,4 @@
+incident_id,severity,category,status,description
+1,High,Phishing,Open,Credential phishing email reported by finance
+2,Critical,Ransomware,Investigating,Ransomware detected on file server
+3,Low,Policy,Closed,Unapproved software installed on laptop

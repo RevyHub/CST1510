@@ -1,0 +1,5 @@
+Name,Course,Grade,Attendance,City,Age,Scholarship
+Alice,Computing,85.0,96.0,London,20.0,Yes
+Ben,Computing,75.2,88.0,Leeds,22.0,Unknown
+Cara,Unknown,91.0,98.0,London,21.0,Yes
+Farah,Data Science,64.0,82.0,Manchester,23.0,Unknown
